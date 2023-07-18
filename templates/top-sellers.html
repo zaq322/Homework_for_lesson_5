@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+{% extends 'base.html' %}
 <html lang="en">
 <head>
   {% load static %}
@@ -13,6 +13,7 @@
 </head>
 
 <body>
+{% block content_sell %}
   <ul class="nav nav-pills sticky-top bg-white nav-fill">
     <li class="nav-item">
       <a class="nav-link"  href="{% url 'main-page' %}">
@@ -113,6 +114,7 @@
       </div>
     </nav>
   </footer>
+{% endblock %}
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
