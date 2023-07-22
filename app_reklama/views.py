@@ -2,6 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
+#какой-то код, вместо django_shell
+def debug_method(request):
+    #
+    #код
+    #
+    return HttpResponse("debug")
 
 
 def index(request):
