@@ -11,5 +11,5 @@ class Reklama(models.Model):
     user = models.CharField("пользователь", max_length=126)  # Просто имя
     date = models.DateField("дата", auto_now_add=True)
     def __str__(self):
-        return f"{self.text}, {self.price}, {self.title}"
+        return f"Reklama(text = {self.text}, price = {self.price}, title = {self.title})"
 
