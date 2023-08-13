@@ -3,21 +3,20 @@ from .models import Reklama
 
 # Register your models here.
 class ReklamaAdmin(admin.ModelAdmin):
-    list_display = ['id', 'title', 'text', 'price', 'user', 'date', 'auction', 'created_at','update_at','created_date','update_date']
+    list_display = ['id', 'title', 'text', 'price', 'user', 'date', 'auction', 'created_at','update_at','created_date','update_date', 'author', 'photo']
     list_filter = ['auction','created_at']
     actions = ['make_auction_as_false', 'make_auction_as_true'] #указываем функции
     fieldsets = (
         (
             'Общее', #Добавляем красивый блок "общее"
             {
-                "fields":('title', 'text')
+                "fields":('title', 'text', 'author','image')
             }
          ),
         (
             'Финансы', #Добавили красивый блок "Финансы"
             {
-                "fields":('price', 'auction'),
-                "classes":['collapse'] #Для скрытия
+                "fields":('price', 'auction')
             }
         )
     )

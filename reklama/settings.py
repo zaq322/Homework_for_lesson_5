@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     "app_reklama",
-    "lesson4",
 ]
 
 MIDDLEWARE = [
@@ -126,3 +125,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = [
      Path.joinpath(BASE_DIR, "static"),
 ]
+
+MEDIA_URL = "media/"
