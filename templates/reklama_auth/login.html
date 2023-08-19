@@ -11,9 +11,10 @@
   <title>Index</title>
 </head>
 
+{% block content_sell %}
   <ul class="nav nav-pills sticky-top bg-white nav-fill">
     <li class="nav-item">
-      <a class="nav-link" href="index.html">
+      <a class="nav-link" href="{% url 'main-page' %}">
         <span style="font-weight: bold;">Главная</span>
       </a>
     </li>
@@ -55,12 +56,12 @@
       </div>
     </div>
   </div>
-    <form method="post">
+    <form method="post"> {% csrf_token %}
       <div class="row mb-3">
         <div class="col">
           <label class="col-sm-4 col-form-label offset-4">Username</label>
           <div class="col-sm-4 offset-4 w-25">
-            <input type="text" class="form-control form-control-lg">
+            <input type="password" name="username" class="form-control form-control-lg">
           </div>
         </div>
       </div>
@@ -68,7 +69,7 @@
         <div class="col">
           <label class="col-sm-4 col-form-label offset-4">Password</label>
           <div class="col-sm-4 offset-4 w-25">
-            <input type="password" class="form-control form-control-lg">
+            <input type="password" name="password" class="form-control form-control-lg">
           </div>
         </div>
       </div>
@@ -82,3 +83,4 @@
   <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+{% endblock %}
